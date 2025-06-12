@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creators Adda - Hero Section</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inter Font (Optional, Tailwind's font-sans will default to sans-serif) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    /* Set base font */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Animated gradient background */
+    .animated-bg {
+      background: linear-gradient(-45deg, #1e293b, #0f172a, #334155, #1e3a8a);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body class="m-0 p-0 min-h-screen animated-bg text-white flex items-center justify-center">
+
+  <!-- Hero Section Container -->
+  <main class="text-center px-6 md:px-16">
+    <!-- Main Heading -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+      Creators Adda
+    </h1>
+
+    <!-- Tagline -->
+    <p class="text-lg sm:text-xl lg:text-2xl font-medium text-slate-300 mb-8 max-w-2xl mx-auto">
+      Connecting Visionary Brands with Innovative Talent
+    </p>
+
+    <!-- Call-to-Action Buttons -->
+    <div class="flex justify-center gap-6 flex-wrap">
+      <!-- Brands Button -->
+      <button 
+        onclick="handleClick('Brands')"
+        class="bg-blue-600 hover:bg-blue-700 transition-all px-6 py-3 rounded-xl text-lg font-semibold focus:outline-none shadow-lg">
+        Brands
+      </button>
+
+      <!-- Creators Button -->
+      <button 
+        onclick="handleClick('Creators')"
+        class="bg-purple-600 hover:bg-purple-700 transition-all px-6 py-3 rounded-xl text-lg font-semibold focus:outline-none shadow-lg">
+        Creators
+      </button>
+    </div>
+  </main>
+
+  <!-- JavaScript Section -->
+  <script>
+    // Handles button clicks
+    function handleClick(role) {
+      console.log(`${role} button clicked, ready to open form`);
+    }
+  </script>
+</body>
+</html>
